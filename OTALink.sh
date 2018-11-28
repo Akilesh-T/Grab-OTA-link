@@ -9,7 +9,7 @@ echo "Check for updates now"
 id=`$adb_binary shell getprop ro.build.display.id`
 ver=${id:2:2}
 if [ ver == "CN" ]; then
-   $adb_binary logcat | grep "ota-filesite.c2dms.com/SWUpdate"
+   $adb_binary logcat | grep "ota-filesite.c2dms.com"
 else   
    $adb_binary logcat | grep "packages/ota-api"
 fi   
